@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+const Home = () => {
   return (
     <div
       style={{
@@ -11,82 +11,84 @@ export default function Home() {
         backgroundColor: "#121212",
         padding: "20px",
         fontSize: "18px",
+        color: "#e1e1e1",
+        alignItems: "center",
       }}
     >
-      <header
+      <h1
         style={{
-          marginBottom: "40px",
-          fontWeight: "600",
-          fontSize: "28px",
-          color: "#e1e1e1",
+          fontSize: "32px",
+          fontWeight: "bold",
+          marginBottom: "20px",
           textAlign: "center",
         }}
       >
         Добро пожаловать в Diamond Smoke
-      </header>
+      </h1>
 
-      <main
+      <p style={{ marginBottom: "30px", textAlign: "center" }}>
+        Выберите раздел, чтобы продолжить
+      </p>
+
+      <div
         style={{
-          flexGrow: 1,
-          backgroundColor: "#1e1e1e",
-          borderRadius: "20px",
-          padding: "30px",
-          boxShadow:
-            "0 8px 20px rgba(0, 0, 0, 0.6), 0 0 10px #0a84ff33 inset",
-          color: "#e1e1e1",
+          display: "flex",
+          flexDirection: "column",
+          gap: "15px",
+          width: "100%",
+          maxWidth: "300px",
         }}
       >
-        <p>Выберите раздел:</p>
-        <div style={{ marginTop: "20px", display: "flex", gap: "15px" }}>
-          <Link
-            to="/catalog"
-            style={{
-              background: "#0a84ff",
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "10px",
-              textDecoration: "none",
-            }}
-          >
-            📦 Каталог
-          </Link>
-          <Link
-            to="/profile"
-            style={{
-              background: "#4caf50",
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "10px",
-              textDecoration: "none",
-            }}
-          >
-            🧑‍💼 Профиль
-          </Link>
-          <Link
-            to="/about"
-            style={{
-              background: "#9c27b0",
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "10px",
-              textDecoration: "none",
-            }}
-          >
-            ℹ️ О нас
-          </Link>
-        </div>
-      </main>
+        <Link
+          to="/catalog"
+          style={{
+            padding: "15px",
+            backgroundColor: "#1e1e1e",
+            color: "#e1e1e1",
+            textAlign: "center",
+            borderRadius: "10px",
+            textDecoration: "none",
+            fontSize: "18px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
+          }}
+        >
+          Каталог
+        </Link>
 
-      <footer
-        style={{
-          marginTop: "40px",
-          textAlign: "center",
-          color: "#555",
-          fontSize: "14px",
-        }}
-      >
-        &copy; 2025 Diamond Smoke
-      </footer>
+        <Link
+          to="/profile"
+          style={{
+            padding: "15px",
+            backgroundColor: "#1e1e1e",
+            color: "#e1e1e1",
+            textAlign: "center",
+            borderRadius: "10px",
+            textDecoration: "none",
+            fontSize: "18px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
+          }}
+        >
+          Профиль
+        </Link>
+
+        <Link
+          to="/about"
+          style={{
+            padding: "15px",
+            backgroundColor: "#1e1e1e",
+            color: "#e1e1e1",
+            textAlign: "center",
+            borderRadius: "10px",
+            textDecoration: "none",
+            fontSize: "18px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
+          }}
+        >
+          О нас
+        </Link>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
